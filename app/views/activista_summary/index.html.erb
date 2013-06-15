@@ -1,0 +1,25 @@
+<h1>Top 10 Activistas</h1>
+
+
+
+<% @activistasByWeek.each do |week,values|%>
+  
+  <table>
+  <tr>
+    <th> USER ID</th>
+    <th>#Interactions</th>    
+    <th>Started</th>    
+    <th>Ended</th>    
+  </tr>
+  <h2>Week : <%= week %> </h2>    
+  <% values.each do |act|%>
+  <tr>
+    <td><%= act.id %></td>   
+    <td><%= act.interactions.size%></td>   
+    <td><%= act.interactions.first.created_at %></td>   
+    <td><%= act.interactions.last.created_at %></td>   
+  </tr>  
+   <% end %>     
+</table>  
+<p>
+<% end %>
