@@ -1,4 +1,6 @@
 MovercadoAnalysis::Application.routes.draw do
+  get "activista_summary/index"
+
   get "kannel/entry_point"
 
   resources :codes
@@ -11,6 +13,9 @@ MovercadoAnalysis::Application.routes.draw do
   resources :users
 
   root to: "smses#index"
+
+  #Creating custom path for /activista_summary
+  match "activista_summary" => "activista_summary#index"
 
 
   # The priority is based upon order of creation:

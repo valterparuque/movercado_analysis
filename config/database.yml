@@ -9,6 +9,8 @@ development:
   database: movercado-analysis_development
   pool: 5
   template: template0
+  username : postgres
+  password : postgres
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -20,6 +22,8 @@ test:
   pool: 5
   timeout: 5000
   template: template0
+  username : postgres
+  password : postgres
 
 production:
   adapter: postgresql
